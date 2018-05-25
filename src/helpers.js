@@ -56,8 +56,8 @@ export function groupByActionTypes (rawActions) {
 }
 
 export function newHistory (past, present, future, group = null) {
-  if(group != null) {
-    present.__group__ = group;
+  if (group != null) {
+    present.__group__ = group
   }
   return {
     past,

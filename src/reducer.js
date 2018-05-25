@@ -48,7 +48,7 @@ function jumpToFuture (history, index) {
   const newPast = [...past, _latestUnfiltered, ...future.slice(0, index)]
   const newPresent = future[index]
   const newFuture = future.slice(index + 1)
-  const newGroup = newPresent.__group__;
+  const newGroup = newPresent.__group__
 
   return newHistory(newPast, newPresent, newFuture, newGroup)
 }
@@ -62,7 +62,7 @@ function jumpToPast (history, index) {
   const newPast = past.slice(0, index)
   const newFuture = [...past.slice(index + 1), _latestUnfiltered, ...future]
   const newPresent = past[index]
-  const newGroup = newPresent.__group__;
+  const newGroup = newPresent.__group__
 
   return newHistory(newPast, newPresent, newFuture, newGroup)
 }
